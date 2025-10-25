@@ -18,21 +18,25 @@ export default function Homepage() {
         {name: "Ardei Rosu", price: 10, path: ardeiRosu}
     ]
 
+    const doubledProductList = [...productList, ...productList];
+
 
     return (
         <>
             <div className="homepageContainer">
                 <div className="homepageButtons"></div>
                 
-                <div className="productsContainer">
-                    { productList.map((product, index) => (
-                        <Box 
-                        key = {index}
-                        searchImage = {product.path}
-                        imageName = {product.name}
-                        productPrice = {product.price}
-                        />
-                    ))}
+                <div className="productsScroller">
+                    <div className="productsContainer">
+                        { doubledProductList.map((product, index) => (
+                            <Box 
+                            key = {index}
+                            searchImage = {product.path}
+                            imageName = {product.name}
+                            productPrice = {product.price}
+                            />
+                        ))}
+                    </div>
                 </div>
 
                 <div className="homepageBottomContainer"></div>
