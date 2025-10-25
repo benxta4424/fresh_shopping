@@ -1,0 +1,156 @@
+/* moving animation on the products */
+.productsScroller {
+  width: 100%;
+  overflow: hidden; 
+
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.productsScroller:hover .productsContainer {
+  animation-play-state: paused;
+}
+.homepageContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  max-height: 700px;
+
+}
+
+
+
+/* all about the box and its styling */
+.productsContainer {
+  display: flex;
+  flex-direction: row; 
+  width: max-content; 
+  
+  
+  gap: 200px;       
+  padding: 10px 0; 
+  margin-top: 5%;  
+
+  animation: scroll 40s linear infinite;
+}
+
+.item_picture {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+
+  width: 300px;
+  background-color: #ffffff;
+
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.item_picture:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+.boxImages {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.item_title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0.75rem 0 0.5rem 0;
+}
+.buyingButton {
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0.5rem 0.5rem; /* Give it some space */
+  transition: background-color 0.2s ease;
+}
+
+.buyingButton:hover {
+  background-color: #218838;
+}
+
+
+
+
+
+/* top buttons */
+.homepageContainer {
+    display: flex;
+    justify-content: space-between;
+}
+.homepageButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;   
+}
+.homepageUpperButtons {
+    border: none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: -4px 1px 1px 2px lightcyan;
+    font-size: 12px;
+    font-weight: 900;
+    scale: 0.9;
+    transition-duration: 1s;
+}
+.homepageUpperButtons:hover {
+    background-color: aqua;
+    color: white;
+    transition-duration: 1s;
+    scale: 1.2;
+}
+.spaceLogoButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.logo {
+    border-radius: 100%;
+    width: 100px;
+    height: 60px;
+    border-radius: 80%;
+    padding: 10px;
+
+    animation: pounding 2s ease-in-out infinite ;
+}
+
+
+@keyframes pounding {
+/* Start at normal size */
+  0% {
+    transform: scale(1);
+    box-shadow: 1px 1px 1px 1px grey;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 2px 4px 8px 2px rgba(128, 128, 128, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 1px 1px 1px 1px grey;
+  }
+}

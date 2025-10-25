@@ -23,8 +23,21 @@ export default function Homepage() {
 
     return (
         <>
+        {/* <div className="addLogo">
+                        <img src="src\Components\imgs\storeLogo.png" alt="store logo" className='logo' />
+                    </div> */}
+
             <div className="homepageContainer">
-                <div className="homepageButtons"></div>
+                <div className="homepageButtons">
+                    <div className="addLogo">
+                        <img src="src\Components\imgs\logoAgriculture.jpg" alt="store logo" className='logo' />
+                    </div>
+
+                    <div className="spaceLogoButtons">
+                        <button className='homepageUpperButtons'>Contact</button>
+                        <button className='homepageUpperButtons'>Cart</button>
+                    </div>
+                </div>
                 
                 <div className="productsScroller">
                     <div className="productsContainer">
