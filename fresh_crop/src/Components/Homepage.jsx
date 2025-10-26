@@ -6,8 +6,10 @@ import vinete from './imgs/christy-hinko-nbbwiNujmxM-unsplash.jpg'
 import cartofi from './imgs/engin-akyurt-O9p8KIv39gA-unsplash.jpg'
 import rosii from './imgs/justus-menke-zRqRhIJqdnI-unsplash.jpg'
 import ardeiRosu from './imgs/theo-crazzolara-gfmqaW_Pk20-unsplash.jpg'
+import { useState } from 'react'
 
 export default function Homepage() {
+    
     const productList = [
         {name: "Marar", price: 15, path: marar},
         {name: "Varza", price: 3, path: varza},
@@ -17,16 +19,16 @@ export default function Homepage() {
         {name: "Rosii", price: 20, path: rosii},
         {name: "Ardei Rosu", price: 10, path: ardeiRosu}
     ]
-
+    
+    const [count, setCounter] = useState(0)
     const doubledProductList = [...productList, ...productList];
-
+    
+    const handleClick = () => {
+        setCounter(c => c + 1)
+    }
 
     return (
         <>
-        {/* <div className="addLogo">
-                        <img src="src\Components\imgs\storeLogo.png" alt="store logo" className='logo' />
-                    </div> */}
-
             <div className="homepageContainer">
                 <div className="homepageButtons">
                     <div className="addLogo">
@@ -35,7 +37,7 @@ export default function Homepage() {
 
                     <div className="spaceLogoButtons">
                         <button className='homepageUpperButtons'>Contact</button>
-                        <button className='homepageUpperButtons'>Cart</button>
+                        <button className='homepageUpperButtons'>Cart {count}</button>
                     </div>
                 </div>
                 
@@ -47,6 +49,7 @@ export default function Homepage() {
                             searchImage = {product.path}
                             imageName = {product.name}
                             productPrice = {product.price}
+                            onButtonBuy = {handleClick}
                             />
                         ))}
                     </div>

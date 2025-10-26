@@ -5,7 +5,7 @@ export default function Box(props) {
                 <div className="item_picture">
                     <img src={props.searchImage} alt="marar" className="boxImages" />
                     <div className="item_title">{props.imageName}</div>
-                    <button className="buyingButton">{props.productPrice} RON</button>
+                    <button className="buyingButton" onClick={props.onButtonBuy}>{props.productPrice} RON</button>
                 </div>
 
         

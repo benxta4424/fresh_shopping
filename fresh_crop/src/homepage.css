@@ -154,3 +154,9 @@
     box-shadow: 1px 1px 1px 1px grey;
   }
 }
+
+.backgroundLogo {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
