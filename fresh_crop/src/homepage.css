@@ -97,7 +97,9 @@
 /* top buttons */
 .homepageContainer {
     display: flex;
+    flex: 1;
     justify-content: space-between;
+    background: linear-gradient(180deg, #ffffff 0%, #fffef5 100%);
 }
 .homepageButtons {
     display: flex;

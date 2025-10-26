@@ -7,6 +7,7 @@ import cartofi from './imgs/engin-akyurt-O9p8KIv39gA-unsplash.jpg'
 import rosii from './imgs/justus-menke-zRqRhIJqdnI-unsplash.jpg'
 import ardeiRosu from './imgs/theo-crazzolara-gfmqaW_Pk20-unsplash.jpg'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Homepage() {
     
@@ -36,8 +37,10 @@ export default function Homepage() {
                     </div>
 
                     <div className="spaceLogoButtons">
-                        <button className='homepageUpperButtons'>Contact</button>
-                        <button className='homepageUpperButtons'>Cart {count}</button>
+                        <Link to="contact"><button className='homepageUpperButtons'>Contact</button></Link>
+                        <Link to="cart"><button className='homepageUpperButtons'>Cart 
+                            { count > 0 && ` ${count}` }  
+                        </button></Link>
                     </div>
                 </div>
                 
