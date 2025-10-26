@@ -1,0 +1,291 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f4f8;     color: #333;
+    margin: 0;
+}
+
+.contactContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.goBack {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4a5568;
+    background: #ffffff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 99px; /* Pill shape */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+
+}
+
+.goBack:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.contactBox {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+}
+
+.leftPart,
+.rightPart {
+    flex-basis: 50%;
+    padding: 4rem; 
+    box-sizing: border-box;
+}
+
+.leftPart {
+    display: flex;
+    flex-direction: column;
+    background: #fdfdfd;
+}
+
+.contactTitle {
+    font-size: 2.75rem; 
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 0.75rem;
+}
+
+.contactSubTitle {
+    font-size: 1.25rem; 
+    color: #4a5568;
+    margin-bottom: 2rem;
+}
+
+.contactParagraph {
+    font-size: 1rem;
+    color: #718096;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.email {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2b6cb0; 
+    text-decoration: none;
+    margin-bottom: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+.email:hover {
+    color: #2c5282; 
+    text-decoration: underline;
+}
+
+.email .fa-envelope {
+    font-size: 1.2rem;
+}
+
+.everySocialMedia {
+    display: flex;
+    gap: 1.25rem; 
+    margin-top: auto; 
+}
+
+.everySocialMedia a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background-color: #edf2f7; 
+    color: #4a5568; 
+    border-radius: 50%; 
+    text-decoration: none;
+    font-size: 1.4rem; 
+    transition: all 0.3s ease;
+}
+
+.everySocialMedia a:hover {
+    color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.everySocialMedia a[title="GitHub"]:hover {
+    background-color: #333;
+}
+.everySocialMedia a[title="LinkedIn"]:hover {
+    background-color: #0A66C2;
+}
+.everySocialMedia a[title="Instagram"]:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.everySocialMedia a[title="Facebook"]:hover {
+    background-color: #1877F2;
+}
+
+
+.rightPart {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightPart::before {
+    content: 'Your contact form will appear here.';
+    display: block;
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #a0aec0; 
+    font-style: italic;
+    border: 2px dashed #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 900px) {
+    .contactBox {
+        flex-direction: column;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .leftPart,
+    .rightPart {
+        flex-basis: auto; 
+        padding: 2.5rem; 
+    }
+
+    .goBack {
+        top: 1rem;
+        left: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .contactTitle {
+        font-size: 2.25rem;
+    }
+}
+
+/* right part */
+.rightPart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f7faff; 
+}
+
+.rightPart::before {
+    display: none; 
+}
+
+.rightPart form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem; 
+    width: 100%;
+}
+
+.formRow {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.formRow .inputGroup {
+    flex: 1; 
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+}
+
+.inputGroup label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #4a5568; 
+}
+
+.inputGroup input[type="text"],
+.inputGroup input[type="email"],
+.inputGroup textarea {
+    font-family: 'Inter', sans-serif; 
+    font-size: 1rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #1a202c;
+    transition: all 2s ease;
+}
+
+
+.inputGroup input[type="text"]:focus,
+.inputGroup input[type="email"]:focus,
+.inputGroup textarea:focus {
+    outline: none;
+    border-color: #3182ce; 
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.3);
+}
+
+.inputGroup textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+
+.submitBtn {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: #3182ce; 
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem; 
+}
+
+.submitBtn:hover {
+    background: #2b6cb0; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
+}
+
+
+@media (max-width: 600px) {
+    /* Stack First and Last name on small screens */
+    .formRow {
+        flex-direction: column;
+    }
+}

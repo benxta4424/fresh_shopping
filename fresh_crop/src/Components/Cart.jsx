@@ -2,7 +2,7 @@ export default function Cart() {
         return (
         <>
         
-            <div className="title">BAAAA</div>
+            <div className="title">cartier</div>
         
         </>
     )

@@ -37,8 +37,8 @@ export default function Homepage() {
                     </div>
 
                     <div className="spaceLogoButtons">
-                        <Link to="contact"><button className='homepageUpperButtons'>Contact</button></Link>
-                        <Link to="cart"><button className='homepageUpperButtons'>Cart 
+                        <Link to="/contact"><button className='homepageUpperButtons'>Contact</button></Link>
+                        <Link to="/cart"><button className='homepageUpperButtons'>Cart 
                             { count > 0 && ` ${count}` }  
                         </button></Link>
                     </div>
