@@ -8,6 +8,7 @@ import rosii from './imgs/justus-menke-zRqRhIJqdnI-unsplash.jpg'
 import ardeiRosu from './imgs/theo-crazzolara-gfmqaW_Pk20-unsplash.jpg'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { takeCareOfCart } from "./zustandStore"
 
 export default function Homepage() {
     
@@ -28,6 +29,9 @@ export default function Homepage() {
         setCounter(c => c + 1)
     }
 
+    const buyingItem = takeCareOfCart((state) => state.addToCart)
+    const cartCount = takeCareOfCart((state) => state.cartItems.length)
+
     return (
         <>
             <div className="homepageContainer">
@@ -39,7 +43,7 @@ export default function Homepage() {
                     <div className="spaceLogoButtons">
                         <Link to="/contact"><button className='homepageUpperButtons'>Contact</button></Link>
                         <Link to="/cart"><button className='homepageUpperButtons'>Cart 
-                            { count > 0 && ` ${count}` }  
+                            { cartCount > 0 && ` ${cartCount}` }  
                         </button></Link>
                     </div>
                 </div>
@@ -52,13 +56,16 @@ export default function Homepage() {
                             searchImage = {product.path}
                             imageName = {product.name}
                             productPrice = {product.price}
-                            onButtonBuy = {handleClick}
+                            onButtonBuy = {() => buyingItem(product)}
                             />
                         ))}
                     </div>
                 </div>
 
-                <div className="homepageBottomContainer"></div>
+            </div>
+            
+            <div className="homepageBottomContainer">
+                reserved for footer
             </div>
         </>
     )
