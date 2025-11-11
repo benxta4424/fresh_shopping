@@ -51,7 +51,9 @@ export default function Cart() {
 
                 <div className="cartButtons">
                     <div className="totalCartValue">Total: {suma} RON</div>
-                    <div className="placeCommand"> <Link to={"/command"}>Place</Link> </div>
+                    <div className="placeCommand">
+                        { suma > 0 && <Link to={"/command"}>Place</Link> }     
+                    </div>
 
                     <div className="emptyCart">
                         <button onClick={() => emptyCart()}> Empty Cart </button>
