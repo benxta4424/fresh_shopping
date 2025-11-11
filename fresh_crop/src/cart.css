@@ -1,0 +1,180 @@
+/* Back link */
+.goBack {
+  display: inline-block;
+  margin: 1rem 0 0 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #475569; /* Gray */
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.goBack:hover {
+  background-color: #f1f5f9; /* Light gray background on hover */
+}
+
+/* Main container for the whole cart */
+.cartContainer {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto 2rem auto; /* Added 1rem top margin */
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+/* Container for each product line */
+.productBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.productBox:last-child {
+  border-bottom: none; /* This might not be the last one anymore, check cartButtons */
+}
+
+/* Style for the item name */
+.itemName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  flex: 1;
+}
+
+/* Style for the quantity */
+.quantityProducts {
+  font-size: 1rem;
+  color: #64748b;
+  margin: 0 1rem;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* Style for the price */
+.itemPrice {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #334155;
+  min-width: 80px;
+  text-align: right;
+}
+
+/* Style for the button container */
+.addingAdditional {
+  margin-left: 1rem;
+}
+
+/* The '+' button */
+.addingAdditional button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #16a34a; /* Green */
+  background-color: #f0fdf4; /* Light green */
+  border: 1px solid #86efac; /* Medium green */
+  border-radius: 50%;
+  cursor: pointer;
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+
+.addingAdditional button:hover {
+  background-color: #dcfce7;
+  transform: scale(1.05);
+}
+
+.addingAdditional button:active {
+  transform: scale(0.95);
+}
+
+/* --- New Styles for Cart Footer --- */
+
+/* Container for all buttons at the bottom */
+.cartButtons {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f1f5f9; /* Separator line */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Total price display */
+.totalCartValue {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0f172a; /* Dark text */
+}
+
+/* 'Place' link/button */
+.placeCommand Link, /* For react-router Link */
+.placeCommand a {   /* For regular links */
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff; /* White text */
+  background-color: #2563eb; /* Blue */
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.placeCommand Link:hover,
+.placeCommand a:hover {
+  background-color: #1d4ed8; /* Darker blue */
+}
+
+/* 'Empty Cart' button */
+.emptyCart button {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #dc2626; /* Red */
+  background-color: #fee2e2; /* Light red */
+  border: 1px solid #ef4444; /* Medium red */
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.emptyCart button:hover {
+  background-color: #fecaca;
+}
+
+
+
+
+
+
+
+/* commands */
+
+.commandContainer {
+    display: flex;
+    box-shadow:  1px 1px 1px 4px grey;
+    padding: 20px;
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 10%;
+}
