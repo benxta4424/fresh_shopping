@@ -12,15 +12,7 @@ import { takeCareOfCart } from "./zustandStore"
 
 export default function Homepage() {
     
-    const productList = [
-        {name: "Marar", price: 15, path: marar},
-        {name: "Varza", price: 3, path: varza},
-        {name: "Ceapa", price: 10, path: ceapa},
-        {name: "Vinete", price: 8, path: vinete},
-        {name: "Cartofi", price: 2, path: cartofi},
-        {name: "Rosii", price: 20, path: rosii},
-        {name: "Ardei Rosu", price: 10, path: ardeiRosu}
-    ]
+    const productList = takeCareOfCart((state) => state.allProductsList)
     
     const [count, setCounter] = useState(0)
     const doubledProductList = [...productList, ...productList];
@@ -41,6 +33,7 @@ export default function Homepage() {
                     </div>
 
                     <div className="spaceLogoButtons">
+                        <Link to={"/about"}> <button className='homepageUpperButtons'>About</button> </Link>
                         <Link to="/contact"><button className='homepageUpperButtons'>Contact</button></Link>
                         <Link to="/cart"><button className='homepageUpperButtons'>Cart 
                             { cartCount > 0 && ` ${cartCount}` }  
@@ -65,7 +58,7 @@ export default function Homepage() {
             </div>
             
             <div className="homepageBottomContainer">
-                reserved for footer
+                <Link to={"/products"} className='shopButton'> Shop </Link>
             </div>
         </>
     )

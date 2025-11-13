@@ -2,6 +2,8 @@ import Homepage from "./Homepage";
 import Contact from "./Contact";
 import Cart from "./Cart";
 import CommandWindow from "./CommandWindow";
+import Products from "./Products";
+import About from "./About";
 
 const my_routes = [
     {
@@ -19,6 +21,14 @@ const my_routes = [
     {
         path: "/command",
         element: <CommandWindow />
+    },
+    {
+        path: "/products",
+        element: <Products/>
+    },
+    {
+        path:"/about",
+        element:<About/>
     }
 
 ]

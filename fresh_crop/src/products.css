@@ -1,0 +1,30 @@
+.allProductContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+.exitButton {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(227, 25, 217);
+    border-radius: 99px; /* Pill shape */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+
+}
+.exitButton:hover {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    transform: translateY(-2px);
+    transition-duration: 0.3s;
+    box-shadow: 0 6px 1px rgb(234, 114, 114);
+}
