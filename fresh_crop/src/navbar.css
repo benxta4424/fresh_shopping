@@ -1,19 +1,19 @@
 .homepageButtons {
-    
-    background-color: transparent;
-}
-.navbar {
-    position: sticky;
+    position: fixed;    
     top: 0;
+    left: 0;
+    width: 96%; 
     z-index: 1000;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    background-color: transparent;
     padding: 1rem 2rem;
+    
+    background-color: transparent; 
+    
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
 }
-
 .nav-links {
     display: flex;
     gap: 20px;
@@ -41,8 +41,8 @@
 }
 .logo {
     border-radius: 100%;
-    width: 80px;
-    height: 40px;
+    width: 100px;
+    height: 60px;
     border-radius: 90%;
     padding: 10px;
     animation: pounding 2s ease-in-out infinite ;
@@ -59,6 +59,7 @@
     transform: scale(1.25);
     transition-duration: 0.5s;
     box-shadow: 1px 1px 10px 2px grey;
+    color: cyan;
     padding: 10px;
     height: 10px;
 }

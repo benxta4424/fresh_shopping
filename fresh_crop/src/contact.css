@@ -15,25 +15,8 @@ body {
     padding: 2rem;
     box-sizing: border-box;
     position: relative;
-}
 
-.goBack {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #4a5568;
-    background: #ffffff;
-    padding: 0.6rem 1.2rem;
-    border-radius: 99px; /* Pill shape */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-
-    z-index: 10;
-
+    margin-top: 2%;
 }
 
 .goBack:hover {
@@ -49,6 +32,7 @@ body {
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     overflow: hidden; 
+    
 }
 
 .leftPart,

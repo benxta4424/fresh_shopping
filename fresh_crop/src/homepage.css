@@ -41,6 +41,7 @@
   margin-top: 5%;  
 
   animation: scroll 40s linear infinite;
+  margin-top: 10%;
 }
 
 .item_picture {
@@ -89,47 +90,6 @@
 .buyingButton:hover {
   background-color: #218838;
 }
-
-.homepageButtons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;   
-}
-.homepageUpperButtons {
-    position: sticky;
-    border: none;
-    background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: -4px 1px 1px 2px lightcyan;
-    font-size: 12px;
-    font-weight: 900;
-    scale: 0.9;
-    transition-duration: 1s;
-}
-.homepageUpperButtons:hover {
-    background-color: aqua;
-    color: white;
-    transition-duration: 1s;
-    scale: 1.2;
-}
-.spaceLogoButtons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-.logo {
-    border-radius: 100%;
-    width: 100px;
-    height: 60px;
-    border-radius: 80%;
-    padding: 10px;
-
-    animation: pounding 2s ease-in-out infinite ;
-}
-
 
 @keyframes pounding {
 /* Start at normal size */
