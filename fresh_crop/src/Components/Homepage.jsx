@@ -2,24 +2,18 @@ import Box from './ProductBox'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { takeCareOfCart } from "./zustandStore"
+import { takeCareOfNav } from './zustandToggle'
 
 export default function Homepage() {
     
     const productList = takeCareOfCart((state) => state.allProductsList)
-    
-    const [count, setCounter] = useState(0)
     const doubledProductList = [...productList, ...productList];
-    
-    const handleClick = () => {
-        setCounter(c => c + 1)
-    }
-
     const buyingItem = takeCareOfCart((state) => state.addToCart)
-    const cartCount = takeCareOfCart((state) => state.cartItems.length)
+    const toggleDarkMode = takeCareOfNav((state) => state.toggle)
 
     return (
         <>
-            <div className="homepageContainer">
+            <div className={toggleDarkMode === false ?  "darkContainer" : "homepageContainer"}>
                 <div className="productsScroller">
                     <div className="productsContainer">
                         { doubledProductList.map((product, index) => (
@@ -33,12 +27,13 @@ export default function Homepage() {
                         ))}
                     </div>
                 </div>
-
-            </div>
             
             <div className="homepageBottomContainer">
                 <Link to={"/products"} className='shopButton'> Shop </Link>
             </div>
+
+            </div>
+            
         </>
     )
 }

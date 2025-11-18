@@ -24,9 +24,8 @@
   flex-direction: column;
   padding: 10px;
   max-height: 700px;
-
+  background-color: #2F362F;
 }
-
 
 
 /* all about the box and its styling */
@@ -119,7 +118,6 @@
   justify-content: center;
   align-items: center;
 }
-
 
 /* shop button */
 @keyframes shopBreathing {

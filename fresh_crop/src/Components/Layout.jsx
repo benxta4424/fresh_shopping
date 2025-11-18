@@ -1,15 +1,19 @@
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { takeCareOfCart } from "./zustandStore";
+import {takeCareOfNav} from "./zustandToggle"
 
 export default function Layout() {
     const cartCount = takeCareOfCart((state) => state.cartItems.length)
+    const toggleDarkMode = takeCareOfNav((state) => state.toggleTheme)
 
     return(
         <>
             <nav className="homepageButtons">
                 <div className="addLogo">
-                    <img src="src\Components\imgs\logoAgriculture.jpg" alt="store logo" className='logo' />
+                    <button className="darkMode" onClick={ () => toggleDarkMode() }>
+                        <img src="src\Components\imgs\logoAgriculture.jpg" alt="store logo" className='logo' />
+                    </button>
                 </div>
                 
                 <div className="nav-links">
@@ -24,7 +28,7 @@ export default function Layout() {
                 </div>
             </nav>
 
-            <main className="content">
+            <main className= "content">
                 <Outlet/>
             </main>
         </>

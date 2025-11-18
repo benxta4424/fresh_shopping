@@ -38,5 +38,6 @@ export const takeCareOfCart = create((set) => ({
                 {name: "Rosii", price: 20, path: rosii},
                 {name: "Ardei Rosu", price: 10, path: ardeiRosu},
                 {name: "Spanac", price:10, path: spanac }
-    ]
+    ] ,
+    
 }))

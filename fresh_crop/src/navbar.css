@@ -63,3 +63,11 @@
     padding: 10px;
     height: 10px;
 }
+.darkMode {
+    border: none;
+    background-color: transparent;
+}
+
+.buttonWhite {
+    color: white;
+}
