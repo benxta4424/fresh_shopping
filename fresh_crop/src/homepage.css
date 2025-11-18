@@ -97,6 +97,7 @@
     padding: 10px;   
 }
 .homepageUpperButtons {
+    position: sticky;
     border: none;
     background-color: white;
     padding: 10px;

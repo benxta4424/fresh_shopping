@@ -5,7 +5,6 @@ export default function About() {
     return (
         <>
             <div className="aboutContainer">
-                <Link to={"/"} className="goBack">Back</Link>
                 <div className="aboutUs">
                     <div className="titluAbout">Who are we?</div>
                     <div className="descriereAbout">

@@ -9,7 +9,6 @@ export default function Products() {
 
     return (
         <>
-            <Link to={"/"} className="exitButton">exit</Link>
             <div className="allProductContainer">
                 { getAllProducts.map((product, index) => (
                                             <Box 

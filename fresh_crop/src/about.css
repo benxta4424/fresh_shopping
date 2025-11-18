@@ -57,9 +57,15 @@
     word-wrap: break-word;
     padding: 30px;
     box-shadow: -3px 0px 3px 1px grey;
+    transform: scale(1) translateX(10%);
+    transition-duration: 4s;
+    background-color: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
 }
 .descriereAboutOne:hover {
     color: pink;
-    font-size: 20px;
+    transform: scale(1.4) translateX(-10%);
+    transition-duration: 1s;
+    font-size: 15px;
     box-shadow: -3px 0px 3px 1px white;
 }

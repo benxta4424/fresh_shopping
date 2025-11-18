@@ -35,8 +35,6 @@ export default function Cart() {
 
     return (
         <>
-            <Link to="/" className="goBack">Back</Link>
-        
             <div className="cartContainer">
                 {
                     Array.from(processItems).map(([itemName, itemData]) => (

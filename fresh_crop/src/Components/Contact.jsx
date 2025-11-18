@@ -5,9 +5,6 @@ export default function Contact() {
         <>
         
             <div className="contactContainer">
-
-                <Link to="/" className="goBack">Back</Link>
-
                 <div className="contactBox">
                     <div className="leftPart">
                         <div className="contactTitle">Get in Touch</div>
