@@ -6,6 +6,7 @@ import {takeCareOfNav} from "./zustandToggle"
 export default function Layout() {
     const cartCount = takeCareOfCart((state) => state.cartItems.length)
     const toggleDarkMode = takeCareOfNav((state) => state.darkModeOn)
+    const getAllProducts = takeCareOfCart((state) => state.allProductsList)
 
     return(
         <>
@@ -15,8 +16,22 @@ export default function Layout() {
                         <img src="src\Components\imgs\logoAgriculture.jpg" alt="store logo" className='logo' />
                     </button>
                 </div>
+
                 
                 <div className="nav-links">
+                    <form action="get" className="searchForm">
+                        <input type="text" name="searchValue" id="searchValue" list="searchOptions" />
+                        <button type="submit" className="searchButton"> &#128269; </button>
+                    </form>
+
+                    <datalist id="searchOptions">
+                        {
+                            getAllProducts.map((product) => (
+                                <option value={product.name}></option>
+                            ))
+                        }
+                    </datalist>
+                    
                     <Link to="/" className="upperButton">Home</Link>
                     <Link to="/products" className="upperButton">Shop</Link>
                     <Link to="/about" className="upperButton">About</Link>
