@@ -143,8 +143,8 @@
 
 .commandContainer {
     display: flex;
-    box-shadow:  1px 1px 1px 4px grey;
-    padding: 20px;
+    box-shadow:  1px -1px 100px 1px grey;
+    padding: 35px;
     width: 600px;
     justify-content: center;
     align-items: center;

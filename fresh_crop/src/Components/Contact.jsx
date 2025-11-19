@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom"
-import { takeCareOfNav } from "./zustandToggle"
 
 export default function Contact() {
-    const toggleTheme = takeCareOfNav((state) => state.toggle)
-
     return (
         <>
         

@@ -5,13 +5,13 @@ import {takeCareOfNav} from "./zustandToggle"
 
 export default function Layout() {
     const cartCount = takeCareOfCart((state) => state.cartItems.length)
-    const toggleDarkMode = takeCareOfNav((state) => state.toggleTheme)
+    const toggleDarkMode = takeCareOfNav((state) => state.darkModeOn)
 
     return(
         <>
             <nav className="homepageButtons">
                 <div className="addLogo">
-                    <button className="darkMode" onClick={ () => toggleDarkMode() }>
+                    <button className="darkMode" onClick={() => toggleDarkMode }>
                         <img src="src\Components\imgs\logoAgriculture.jpg" alt="store logo" className='logo' />
                     </button>
                 </div>
@@ -28,7 +28,7 @@ export default function Layout() {
                 </div>
             </nav>
 
-            <main className= "content">
+            <main className="content">
                 <Outlet/>
             </main>
         </>

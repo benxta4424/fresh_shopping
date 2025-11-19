@@ -1,16 +1,15 @@
 import { takeCareOfCart } from "./zustandStore"
 import Box from './ProductBox'
-import { takeCareOfNav } from "./zustandToggle"
+import { Link } from "react-router-dom"
 
 
 export default function Products() {
     const getAllProducts = takeCareOfCart((state) => state.allProductsList)
     const buying = takeCareOfCart((state) => state.addToCart )
-    const toggleTheme = takeCareOfNav((state) => state.toggle)
 
     return (
         <>
-            <div className={"allProductContainer"}>
+            <div className="allProductContainer">
                 { getAllProducts.map((product, index) => (
                                             <Box 
                                             key = {index}
