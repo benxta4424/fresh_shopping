@@ -15,11 +15,8 @@ export default function Layout() {
                     <button className="darkMode" onClick={() => toggleDarkMode }>
                         <img src="src\Components\imgs\logoAgriculture.jpg" alt="store logo" className='logo' />
                     </button>
-                </div>
 
-                
-                <div className="nav-links">
-                    <form action="get" className="searchForm">
+                                        <form action="get" className="searchForm">
                         <input type="text" name="searchValue" id="searchValue" list="searchOptions" />
                         <button type="submit" className="searchButton"> &#128269; </button>
                     </form>
@@ -31,6 +28,10 @@ export default function Layout() {
                             ))
                         }
                     </datalist>
+                </div>
+
+                
+                <div className="nav-links">
                     
                     <Link to="/" className="upperButton">Home</Link>
                     <Link to="/products" className="upperButton">Shop</Link>
