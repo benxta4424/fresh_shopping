@@ -7,6 +7,7 @@ import './cart.css'
 import './products.css'
 import './about.css'
 import "./navbar.css"
+import "./mobileResponsivness.css"
 import Homepage from './Components/Homepage'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import my_routes from './Components/routes'
