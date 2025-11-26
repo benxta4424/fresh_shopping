@@ -5,6 +5,7 @@ import CommandWindow from "./CommandWindow";
 import Products from "./Products";
 import About from "./About";
 import Layout from "./Layout";
+import AboutPlant from "./AboutPLant";
 
 const my_routes = [
 {
@@ -34,6 +35,10 @@ const my_routes = [
         {
             path:"/about",
             element:<About/>
+        },
+        {
+            path:"/about/:name",
+            element: <AboutPlant />
         }
     ]
 }
