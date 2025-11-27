@@ -2,11 +2,25 @@ import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { takeCareOfCart } from "./zustandStore";
 import {takeCareOfNav} from "./zustandToggle"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Layout() {
     const cartCount = takeCareOfCart((state) => state.cartItems.length)
     const toggleDarkMode = takeCareOfNav((state) => state.darkModeOn)
     const getAllProducts = takeCareOfCart((state) => state.allProductsList)
+    const [formInput, setFormInput] = useState("")
+    const navigate = useNavigate()
+
+    const vegetablePage = (e) => {
+        e.preventDefault()
+        
+        if(formInput.trim()) {
+            navigate(`/about/${formInput.trim()}`)
+            setFormInput("")
+        }
+
+    }
 
     return(
         <>
@@ -16,8 +30,13 @@ export default function Layout() {
                         <img src="src\Components\imgs\logoAgriculture.jpg" alt="store logo" className='logo' />
                     </button>
 
-                                        <form action="get" className="searchForm">
-                        <input type="text" name="searchValue" id="searchValue" list="searchOptions" />
+                    <form onSubmit={vegetablePage} className="searchForm">
+                        <input 
+                            type="text" 
+                            name="searchValue" 
+                            id="searchValue" 
+                            list="searchOptions"
+                            onChange={(e) => setFormInput(e.target.value)} />
                         <button type="submit" className="searchButton"> &#128269; </button>
                     </form>
 
