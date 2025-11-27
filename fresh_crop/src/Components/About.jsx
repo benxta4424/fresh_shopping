@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import sunlogo from "./imgs/logosoare.jpeg"
-import houseLogo from "./imgs/houseLogo.jpg"
+import houseLogo from "./imgs/houselogo.jpg"
 import tractor from "./imgs/tractor.png"
 import legumita from "./imgs/legumita.png"
 import camion from "./imgs/camion.png"
